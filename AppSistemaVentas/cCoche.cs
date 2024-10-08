@@ -20,7 +20,7 @@ namespace AppSistemaVentas
         }
 
         public cCoche(string pCod, string pNombre, string pPrecio, string pTipoSilla, int pCarga)
-            : base(pCod, pNombre, pPrecio) 
+            : base(pCod, pNombre, pPrecio, TipoProducto.Coche) 
         {
             aTipoSilla = pTipoSilla;
             aCarga = pCarga;
@@ -58,6 +58,11 @@ namespace AppSistemaVentas
             Console.WriteLine("========================");
             Console.WriteLine($"Tipo de Silla: {aTipoSilla}");
             Console.WriteLine($"Capacidad de Carga: {aCarga} kg");
+        }
+
+        public override string mostrarTipo()
+        {
+            return "Coche";
         }
     }
 }

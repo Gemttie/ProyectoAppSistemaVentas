@@ -14,24 +14,14 @@ namespace AppSistemaVentas
             aVenta = new ArrayList();
         }
 
-        //Set y get
-        public void setVenta(ArrayList pVenta)
-        {
-            aVenta = pVenta;
-        }
-
-        public ArrayList getVenta()
-        {
-            return aVenta;
-        }
-
-        //Otros métodos
-        public void agregarProducto(cProducto producto)
+        //agregar un producto a la venta
+        public void AgregarProducto(cProducto producto)
         {
             aVenta.Add(producto);
         }
 
-        public void mostrar()
+        //detalle de la venta
+        public void Mostrar()
         {
             Console.WriteLine("========================");
             Console.WriteLine("DETALLE DE LA VENTA");
@@ -44,13 +34,13 @@ namespace AppSistemaVentas
             }
         }
 
-        public double calcularTotal()
+        //calcular el total de la venta
+        public double CalcularTotal()
         {
             double total = 0;
 
             foreach (cProducto producto in aVenta)
             {
-                // Intentamos convertir el precio del producto a double
                 if (double.TryParse(producto.getPrecio(), out double precio))
                 {
                     total += precio;

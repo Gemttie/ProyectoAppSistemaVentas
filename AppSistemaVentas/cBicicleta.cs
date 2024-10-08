@@ -9,19 +9,19 @@ namespace AppSistemaVentas
     internal class cBicicleta : cProducto
     {
         //Atributos
-        private string aTipoFreno; // Manual, pedal, disco
+        private string aTipoFreno; //manual, pedal, disco
         private bool aRuedaApoyo;
 
         //Metodos
         //Constructores
-        public cBicicleta() : base() // Llama al constructor por defecto de la clase base
+        public cBicicleta() : base() 
         {
             aTipoFreno = "";
             aRuedaApoyo = false;
         }
 
         public cBicicleta(string pCod, string pNombre, string pPrecio, string pTipoFreno, bool pRuedaApoyo)
-            : base(pCod, pNombre, pPrecio) 
+            : base(pCod, pNombre, pPrecio, TipoProducto.Bicicleta) 
         {
             aTipoFreno = pTipoFreno;
             aRuedaApoyo = pRuedaApoyo;
@@ -59,6 +59,11 @@ namespace AppSistemaVentas
             Console.WriteLine("========================");
             Console.WriteLine($"Tipo de Freno: {aTipoFreno}");
             Console.WriteLine($"¿Tiene Ruedas de Apoyo?: {(aRuedaApoyo ? "Sí" : "No")}");
+        }
+
+        public override string mostrarTipo()
+        {
+            return "Bicicleta";
         }
     }
 }

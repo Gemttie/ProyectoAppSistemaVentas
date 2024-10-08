@@ -5,56 +5,61 @@ namespace AppSistemaVentas
 {
     internal class cAlmacen
     {
-        // Atributos
+        //Atributos
         private ArrayList aAlmacen;
 
-        // Constructores
+        //Constructores
         public cAlmacen()
         {
             aAlmacen = new ArrayList();
         }
 
-        // Set y get
-        public void setAlmacen(ArrayList pAlmacen)
-        {
-            aAlmacen = pAlmacen;
-        }
-
-        public ArrayList getAlmacen()
-        {
-            return aAlmacen;
-        }
-
-        // Otros métodos
-        public void agregarProducto(cProducto producto)
+        //agregar producto
+        public void AgregarProducto(cProducto producto)
         {
             aAlmacen.Add(producto);
-            Console.WriteLine($"Producto '{producto.getNombre()}' agregado al almacén.");
+            Console.WriteLine($"Producto '{producto.getNombre()}' agregado al almacen.");
         }
 
-        public void eliminarProducto(string codigo)
+        //eliminar un producto
+        public void EliminarProducto(string codigo)
         {
             foreach (cProducto producto in aAlmacen)
             {
-                if (producto.getCodigo() == codigo)
+                if (producto. getCodigo() == codigo)
                 {
                     aAlmacen.Remove(producto);
-                    Console.WriteLine($"Producto con código '{codigo}' eliminado del almacén.");
+                    Console.WriteLine($"Producto con codigo '{codigo}' eliminado del almacen.");
                     return;
                 }
             }
             Console.WriteLine($"Producto con código '{codigo}' no encontrado.");
         }
 
-        public void mostrarAlmacen()
+        //buscar un producto por código
+        public cProducto BuscarProducto(string codigo)
+        {
+            foreach (cProducto producto in aAlmacen)
+            {
+                if (producto.getCodigo() == codigo)
+                {
+                    return producto;
+                }
+            }
+            Console.WriteLine($"Producto con codigo '{codigo}' no encontrado.");
+            return null;
+        }
+
+        //listar todos los productos
+        public void ListarProductos()
         {
             Console.WriteLine("========================");
-            Console.WriteLine("INVENTARIO DEL ALMACÉN");
+            Console.WriteLine("INVENTARIO DEL ALMACEN");
             Console.WriteLine("========================");
 
             if (aAlmacen.Count == 0)
             {
-                Console.WriteLine("El almacén está vacío.");
+                Console.WriteLine("El almacen esta vacio.");
                 return;
             }
 
@@ -65,18 +70,57 @@ namespace AppSistemaVentas
             }
         }
 
-        public cProducto buscarProducto(string codigo)
+        //listar productos por tipo
+        public void ListarProductosPorTipo(string tipo)
         {
+            Console.WriteLine("========================");
+            Console.WriteLine($"PRODUCTOS DE TIPO '{tipo.ToUpper()}'");
+            Console.WriteLine("========================");
+
+            bool encontrado = false;
+
             foreach (cProducto producto in aAlmacen)
             {
-                if (producto.getCodigo() == codigo)
+                //comparar tipo
+                if (producto is cBicicleta && tipo.Equals("Bicicleta", StringComparison.OrdinalIgnoreCase) ||
+                    producto is cCoche && tipo.Equals("Coche", StringComparison.OrdinalIgnoreCase) ||
+                    producto is cMoto && tipo.Equals("Moto", StringComparison.OrdinalIgnoreCase) ||
+                    producto is cScooter && tipo.Equals("Scooter", StringComparison.OrdinalIgnoreCase))
                 {
-                    return producto;
+                    producto.mostrar();
+                    Console.WriteLine("------------------------");
+                    encontrado = true;
                 }
             }
 
-            Console.WriteLine($"Producto con código '{codigo}' no encontrado.");
-            return null;
+            if (!encontrado)
+            {
+                Console.WriteLine($"No se encontraron productos de tipo '{tipo}'.");
+            }
         }
+
+        public void ListarProductosHorizontal()
+        {
+            Console.WriteLine("=========================================================");
+            Console.WriteLine("Código de Producto       Nombre       Precio      Tipo");
+            Console.WriteLine("=========================================================");
+
+            if (aAlmacen.Count == 0)
+            {
+                Console.WriteLine("El almacén esta vacíio");
+            }
+            else
+            {
+                foreach (cProducto producto in aAlmacen)
+                {
+                    
+                    Console.WriteLine($"{producto.getCodigo().PadRight(25)} {producto.getNombre().PadRight(15)} {producto.getPrecio().PadRight(10)} {producto.mostrarTipo()}");
+                }
+            }
+
+            Console.WriteLine("=========================================================");
+        }
+
+
     }
 }

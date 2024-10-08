@@ -16,7 +16,7 @@ namespace AppSistemaVentas
         }
 
         public cMoto(string pCod, string pNombre, string pPrecio, int pNroRuedas, string pTipoBateria)
-            : base(pCod, pNombre, pPrecio)
+            : base(pCod, pNombre, pPrecio, TipoProducto.Moto)
         {
             aNroRuedas = pNroRuedas;
             aTipoBateria = pTipoBateria;
@@ -53,6 +53,11 @@ namespace AppSistemaVentas
             Console.WriteLine("========================");
             Console.WriteLine($"Número de Ruedas: {aNroRuedas}");
             Console.WriteLine($"Tipo de Batería: {aTipoBateria}");
+        }
+
+        public override string mostrarTipo()
+        {
+            return "Moto";
         }
     }
 }

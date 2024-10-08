@@ -16,7 +16,7 @@ namespace AppSistemaVentas
         }
 
         public cScooter(string pCod, string pNombre, string pPrecio, string pModelo, string pTipoRueda)
-            : base(pCod, pNombre, pPrecio)
+            : base(pCod, pNombre, pPrecio, TipoProducto.Scooter)
         {
             aModelo = pModelo;
             aTipoRueda = pTipoRueda;
@@ -53,6 +53,11 @@ namespace AppSistemaVentas
             Console.WriteLine("========================");
             Console.WriteLine($"Modelo: {aModelo}");
             Console.WriteLine($"Tipo de Rueda: {aTipoRueda}");
+        }
+
+        public override string mostrarTipo()
+        {
+            return "Scooter";
         }
     }
 }
