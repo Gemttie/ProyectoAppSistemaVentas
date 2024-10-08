@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MATTHEW\\source\\repos\\AppSistemaVentas\\AppSistemaVentas\\AppSistemaVentas.csproj",
+      "projectUniqueName": "E:\\ProgamasHechos\\AppSistemaVentas\\AppSistemaVentas\\AppSistemaVentas.csproj",
       "projectName": "AppSistemaVentas",
-      "projectPath": "C:\\Users\\MATTHEW\\source\\repos\\AppSistemaVentas\\AppSistemaVentas\\AppSistemaVentas.csproj",
+      "projectPath": "E:\\ProgamasHechos\\AppSistemaVentas\\AppSistemaVentas\\AppSistemaVentas.csproj",
       "packagesPath": "C:\\Users\\MATTHEW\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MATTHEW\\source\\repos\\AppSistemaVentas\\AppSistemaVentas\\obj\\",
+      "outputPath": "E:\\ProgamasHechos\\AppSistemaVentas\\AppSistemaVentas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MATTHEW\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,15 @@
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\bin\Debug\net8.0\AppSistemaVentas.exe
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\bin\Debug\net8.0\AppSistemaVentas.deps.json
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\bin\Debug\net8.0\AppSistemaVentas.runtimeconfig.json
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\bin\Debug\net8.0\AppSistemaVentas.dll
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\bin\Debug\net8.0\AppSistemaVentas.pdb
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.AssemblyInfoInputs.cache
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.AssemblyInfo.cs
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.csproj.CoreCompileInputs.cache
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.sourcelink.json
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.dll
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\refint\AppSistemaVentas.dll
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.pdb
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\AppSistemaVentas.genruntimeconfig.cache
+E:\ProgamasHechos\AppSistemaVentas\AppSistemaVentas\obj\Debug\net8.0\ref\AppSistemaVentas.dll

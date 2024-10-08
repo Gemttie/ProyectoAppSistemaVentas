@@ -1,17 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppSistemaVentas
 {
-    internal class cScooter
+    internal class cScooter : cProducto
     {
         //Atributos
-        //Metodos
+        private string aModelo; // mini, razor, yvolution
+        private string aTipoRueda; // sólida, inflable
+
         //Constructores
-        //Set y get
-        //Otros metodos
+        public cScooter() : base()
+        {
+            aModelo = "";
+            aTipoRueda = "";
+        }
+
+        public cScooter(string pCod, string pNombre, string pPrecio, string pModelo, string pTipoRueda)
+            : base(pCod, pNombre, pPrecio)
+        {
+            aModelo = pModelo;
+            aTipoRueda = pTipoRueda;
+        }
+
+        //set y get
+        public void setModelo(string pModelo)
+        {
+            aModelo = pModelo;
+        }
+
+        public string getModelo()
+        {
+            return aModelo;
+        }
+
+        public void setTipoRueda(string pTipoRueda)
+        {
+            aTipoRueda = pTipoRueda;
+        }
+
+        public string getTipoRueda()
+        {
+            return aTipoRueda;
+        }
+
+        //Otros métodos
+        public override void mostrar()
+        {
+            base.mostrar();
+
+            Console.WriteLine("========================");
+            Console.WriteLine("INFORMACIÓN DEL SCOOTER");
+            Console.WriteLine("========================");
+            Console.WriteLine($"Modelo: {aModelo}");
+            Console.WriteLine($"Tipo de Rueda: {aTipoRueda}");
+        }
     }
 }
